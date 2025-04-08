@@ -14,7 +14,7 @@ a6 = st.number_input('Enter winddirection : ')
 a7 = st.number_input('Enter windspeed : ')
 
 if st.button('Predict'):
-op.st = mymodel.predict([[a1,a2,a3,a4,a5,a6,a7]])
+    op = mymodel.predict([[a1,a2,a3,a4,a5,a6,a7]])[0]
     if op == 1:
         st.write('Barish Hogi!!!')
     else:
